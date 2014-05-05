@@ -185,6 +185,14 @@ We can check out WebService WSDL at:
 
     http://localhost:8181/cxf/PersonServiceCF?wsdl
 
+We can see the developed web services going at:
+
+    http://localhost:8181/cxf/
+
+It will show:
+
+![Image](images/cxfws.png)
+
 Test with client
 ================
 
