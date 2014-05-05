@@ -3,6 +3,8 @@ Helloworld Fuse
 
 This is a simple Helloworld WebService based on CXF
 
+This example will NOT USE Fabric
+
 Setup Fuse Installation
 =======================
 
@@ -73,19 +75,6 @@ Int the command we used:
     -s maven-setting.xml
 
 this contains the fuse maven repo
-
-Trouble shooting:
-
-It may happens in the future that the:
-
-	servicemix-cxf-code-first-osgi-bundle
-
-version:
-
-	2013.01.0.redhat-610379
-
-will no longer be available, so check the version on fuse public maven repository.
-
 
 Build the project 
 =================

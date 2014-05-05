@@ -3,6 +3,8 @@ Helloworld Fuse
 
 This is a simple Helloworld for camel
 
+This example will NOT USE Fabric
+
 NOTE: this project depends on cxf-hello-world example
 
 Setup Fuse Installation
@@ -69,19 +71,6 @@ Int the command we used:
     -s maven-setting.xml
 
 this contains the fuse maven repo
-
-Trouble shooting:
-
-It may happens in the future that the:
-
-	camel-archetype-blueprint
-
-version:
-
-	2.12.0.redhat-610379
-
-will no longer be available, so check the version on fuse public maven repository.
-
 
 Build the project 
 =================
