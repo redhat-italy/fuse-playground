@@ -68,7 +68,11 @@ mvn:
 
 NOTE:
 
-Int the command we used: -s maven-setting.xml that contains the fuse maven repo
+Int the command we used:
+
+    -s maven-setting.xml
+
+this contains the fuse maven repo
 
 Trouble shooting:
 
@@ -86,7 +90,7 @@ will no longer be available, so check the version on fuse public maven repositor
 Build the project 
 =================
 
-mvn clean install
+    mvn clean install
 
 Wait for the first build
 
