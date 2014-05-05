@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <activeProfiles>
+        <activeProfile>fuse-mvn</activeProfile>
+    </activeProfiles>
+
+   <profiles>
+        <profile>
+            <id>fuse-mvn</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>fusesource</id>
+                    <url>http://repo.fusesource.com/nexus/content/groups/public/</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
+          
+            </repositories>
+        </profile>
+    </profiles>
+ 
+</settings> 
+    <servers>
+        <server>
+            <id>fuse-mvn</id>
+            <username>admin</username>
+            <password>admin</password>
+        </server>
+    </servers>
+
+</settings>
