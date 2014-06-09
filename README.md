@@ -3,7 +3,13 @@ fuse-playground
 
 Fuse playground
 
-Projects
+Examples
 ========
 
-* cxf-hello-world: a first helloworld bundle with a Web Service using cxf
+* [Fuse examples](get-started-examples/README.md)
+
+Fabric
+======
+
+* [Fabric how-to](fabric/README.md)
+
