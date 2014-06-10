@@ -11,8 +11,7 @@
   <description>Getting Started examples</description>
   
   <modules>
-    <module>cxf-hello-world</module>
-    <module>camel-hello-world</module>
+    <module>cxf-hello-world-features</module>
   </modules>
   
 </project>

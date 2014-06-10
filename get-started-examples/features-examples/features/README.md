@@ -10,6 +10,7 @@ Apache Karaf features are designed to address this problem. A feature is essenti
 At a minimum, a feature should contain the basic collection of OSGi bundles that make up the core of your application.
 
 #### Deployment options
+
 You have a few different options for deploying features, as follows:
 
 1) *Hot deploy* the simplest deployment option; just drop the XML features file straight into the hot deploy directory, InstallDir/deploy.
@@ -67,16 +68,16 @@ At the console prompt, use the list command to discover the bundle IDs for the *
 
 Before you can access features from a features repository, you must tell the container where to find the features repository. Add the features repository URL to the container, by entering the following console command:
 
-	JBossFuse:karaf@root> features:addurl mvn:org.fusesource.example/get-started/1.0-SNAPSHOT/xml/features
+	JBossFuse:karaf@root> features:addurl mvn:org.fusesource.example/get-started-examples/1.0-SNAPSHOT/xml/features
 	
 You can check whether the container knows about the new features by entering the console command features:list. If necessary, you can use the features:refreshurl console command, which forces the container to re-read its features repositories.
 
-To install the get-started-basic feature, enter the following console command:
+To install the get-started-examples feature, enter the following console command:
 
-	JBossFuse:karaf@root> features:install get-started-basic
+	JBossFuse:karaf@root> features:install get-started-examples
 	
 After waiting a few seconds for the bundles to start up, you can test the application as described in Test the route with the WS client.
 
 To uninstall the feature, enter the following console command:
 
-	JBossFuse:karaf@root> features:uninstall get-started-basic
+	JBossFuse:karaf@root> features:uninstall get-started-examples
