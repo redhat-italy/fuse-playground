@@ -274,7 +274,7 @@ Test with client
 
 We can call our WebService using maven:
 
-    mvn -Pclient -Dexec.args="http://localhost:9191/PersonServiceCF
+    mvn -Pclient -Dexec.args="http://localhost:9191/PersonServiceCF"
 
 This will use the pom.xml's client profile to run the class:
 
