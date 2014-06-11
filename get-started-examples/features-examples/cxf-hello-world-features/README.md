@@ -169,7 +169,12 @@ This will install the hello world project in your local maven repository
 Connect to fuse and Install the bundle
 ======================================
 
-**NOTE**: before installing the example you NEED to install the feature see [TODO add link to feature howto]
+> ### NOTE
+> Before installing the feature **NEED** to install the examples:
+>
+> follow this guide **[Example Features intro](../README.md)**
+
+
 
 With fuse started, now you can do:
 
@@ -216,6 +221,15 @@ You should get a welcome screen like this:
 
     JBossFuse:admin@root>
 
+check the features (see the [guide](../features/README.md)):
+
+    JBossFuse:admin@root> features:list|grep get-started
+
+this will output:
+
+    [installed  ] [0.0.0                  ] get-started-examples                    get-started
+    [installed  ] [0.0.0                  ] get-started-cxf                         get-started
+
 list the bundles:
 
     JBossFuse:admin@root> list
@@ -224,13 +238,16 @@ this will output a list of bundles like:
 
     START LEVEL 100 , List Threshold: 50
        ID   State         Blueprint      Spring    Level  Name
-    [  66] [Active     ] [Created     ] [       ] [   50] Fabric8 :: Karaf Commands (1.0.0.redhat-379)
-    [  67] [Active     ] [            ] [       ] [   50] Fabric8 :: ConfigAdmin Bridge (1.0.0.redhat-379)
-    [  68] [Active     ] [Created     ] [       ] [   50] JBoss Fuse :: ESB :: Commands (6.1.0.redhat-379)
-    [  83] [Active     ] [            ] [       ] [   60] Guava: Google Core Libraries for Java (15.0.0)
-    [  84] [Active     ] [            ] [       ] [   60] Fabric8 :: Groups (1.0.0.redhat-379)
-    [  85] [Active     ] [            ] [       ] [   60] Fabric8 :: Git (1.0.0.redhat-379)
-    [  86] [Active     ] [Created     ] [       ] [   60] Fabric8 :: JAAS (1.0.0.redhat-379)
+    [ 237] [Active     ] [            ] [       ] [   50] camel-paxlogging (2.12.0.redhat-610379)
+    [ 238] [Active     ] [            ] [       ] [   50] camel-rmi (2.12.0.redhat-610379)
+    [ 245] [Active     ] [            ] [       ] [   60] hawtio :: hawtio-osgi-jmx (1.2.0.redhat-379)
+    [ 246] [Active     ] [            ] [       ] [   60] hawtio :: hawtio-web (1.2.0.redhat-379)
+    [ 247] [Active     ] [Created     ] [       ] [   60] hawtio :: hawtio-json-schema-mbean (1.2.0.redhat-379)
+    [ 248] [Active     ] [            ] [       ] [   60] JLine (2.11.0)
+    [ 249] [Active     ] [Created     ] [       ] [   60] hawtio :: Karaf terminal plugin (1.2.0.redhat-379)
+    [ 250] [Active     ] [Created     ] [       ] [   60] hawtio :: hawtio-maven-indexer (1.2.0.redhat-379)
+    [ 252] [Active     ] [            ] [Started] [   60] Fuse Playground :: CXF Hello World - First OSGi Bundle with fuse features (1.0.0.SNAPSHOT)
+    [ 253] [Active     ] [Created     ] [       ] [   60] A Camel Blueprint Route (1.0.0.SNAPSHOT)
     [...]
 
 we can install previously built cfx-hello-world

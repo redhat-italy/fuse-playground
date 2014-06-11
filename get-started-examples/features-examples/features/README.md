@@ -69,15 +69,40 @@ At the console prompt, use the list command to discover the bundle IDs for the *
 Before you can access features from a features repository, you must tell the container where to find the features repository. Add the features repository URL to the container, by entering the following console command:
 
 	JBossFuse:karaf@root> features:addurl mvn:org.fusesource.example/get-started-examples/1.0-SNAPSHOT/xml/features
-	
-You can check whether the container knows about the new features by entering the console command features:list. If necessary, you can use the features:refreshurl console command, which forces the container to re-read its features repositories.
 
-To install the get-started-examples feature, enter the following console command:
+check with command:
+
+    features:listurl
+
+the list:
+
+	Loaded   URI
+      true    mvn:org.apache.karaf.assemblies.features/spring/2.3.0.redhat-610379/xml/features
+      [...]
+      true    mvn:org.fusesource.example/get-started-examples/1.0-SNAPSHOT/xml/features
+      [...]
+      true    mvn:org.apache.camel.karaf/apache-camel/2.12.0.redhat-610379/xml/features
+      true    mvn:org.fusesource.patch/patch-features/1.0.0.redhat-379/xml/features
+      true    mvn:org.apache.karaf.assemblies.features/standard/2.3.0.redhat-610379/xml/features
+      true    mvn:io.fabric8/fabric8-karaf/1.0.0.redhat-379/xml/features
+      true    mvn:org.ops4j.pax.web/pax-web-features/3.0.6/xml/features
+      true    mvn:org.apache.servicemix.nmr/apache-servicemix-nmr/1.6.0.redhat-610379/xml/features
+
+	
+If necessary, you can use the command:
+
+    features:refreshurl
+
+To force the container to re-read its features repositories.
+
+To install the get-started-examples and get-started-cxf feature, enter the following console command:
 
 	JBossFuse:karaf@root> features:install get-started-examples
-	
+	JBossFuse:karaf@root> features:install get-started-cxf
+
 After waiting a few seconds for the bundles to start up, you can test the application as described in Test the route with the WS client.
 
 To uninstall the feature, enter the following console command:
 
 	JBossFuse:karaf@root> features:uninstall get-started-examples
+	JBossFuse:karaf@root> features:uninstall get-started-cxf

@@ -1,18 +1,17 @@
 Get started examples with features
 ==================================
 
-This is the root dir of the basic examples for Fuse
+This is the root dir of the features examples for Fuse
 
-The examples are:
+First install the cxf feature example:
 
-* [CXF Hello World with features](cxf-hello-world-feature/README.md)
-* [Camel Hello World](camel-hello-world-feature/README.md)
+* [CXF Hello World with features](cxf-hello-world-features/README.md)
 
-You need first to install the exaples then you can install and configure the feature.
+then the basic camel example:
 
-This dir contains the root pom.xml of the projects.
+* [Camel Hello World](../basic-examples/README.md)
 
-It also contains the setup to create a Fuse *feature*
+at last the fatures project:
 
 * [Example Features](features/README.md)
 
