@@ -139,7 +139,22 @@ The key-value pairs in the prop child elements specify default values for the pr
 
 **ctx:property-placeholder** bean makes the properties from the *osgix:cm-properties* bean accessible as property placeholders. That is, a placeholder of the form ${PropName} will be replaced by the value of PropName at run time.
 
-The ${portNumber} placeholder is used to specify the IP port number used by the PersonService Web service. Note the value of the address attribute is now specified as a full HTTP address (in contrast to the address shown in Example 2.1), which means that the WS endpoint gets deployed into a custom Jetty server (instead of the default Jetty server).
+The ${portNumber} placeholder is used to specify the IP port number used by the PersonService Web service. Note the value of the address attribute is now specified as a full HTTP address which means that the WS endpoint gets deployed into a custom Jetty server (instead of the default Jetty server).
+
+Create the config file:
+
+    <InstallDir>/etc/org.fusesource.example.get.started.cfg
+
+int this file insert:
+
+    portNumber=9191
+
+This will make the service start on port 9191 instead of the default 8181
+
+So the actual address of the Web service becomes:
+
+    http://localhost:9191/PersonServiceCF
+
 
 
 build a generic project from scratch
@@ -170,11 +185,9 @@ Connect to fuse and Install the bundle
 ======================================
 
 > ### NOTE
-> Before installing the feature **NEED** to install the examples:
+> Before installing the feature **NEED** to install the examples in maven local repo:
 >
 > follow this guide **[Example Features intro](../README.md)**
-
-
 
 With fuse started, now you can do:
 
@@ -250,44 +263,18 @@ this will output a list of bundles like:
     [ 253] [Active     ] [Created     ] [       ] [   60] A Camel Blueprint Route (1.0.0.SNAPSHOT)
     [...]
 
-we can install previously built cfx-hello-world
-
-    JBossFuse:admin@root> install mvn:org.fusesource.example/cxf-hello-world/1.0-SNAPSHOT
-
-this output (maybe with a different ID) the bundle ID
-
-    Bundle ID: 251
-
-now we can start our bundle with ID 251
-
-    JBossFuse:admin@root> start 251
-
-now if we do:
-
-    JBossFuse:admin@root> list
-
-the last entry of the list shows our bundle:
-
-    [ 251] [Active     ] [            ] [Started] [   60] Apache ServiceMix :: CXF Code First OSGi Bundle (1.0.0.SNAPSHOT)
+we can can see cfx-hello-world-features installed "Fuse Playground :: CXF Hello World - First OSGi Bundle with fuse features (1.0.0.SNAPSHOT)"
 
 We can check out WebService WSDL at:
 
-    http://localhost:8181/cxf/PersonServiceCF?wsdl
-
-We can see the developed web services going at:
-
-    http://localhost:8181/cxf/
-
-It will show:
-
-![Image](images/cxfws.png)
+    http://localhost:9191/PersonServiceCF?wsdl
 
 Test with client
 ================
 
 We can call our WebService using maven:
 
-    mvn -Pclient
+    mvn -Pclient -Dexec.args="http://localhost:9191/PersonServiceCF
 
 This will use the pom.xml's client profile to run the class:
 
